@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="footerCell" rowHeight="98" id="KGk-i7-Jjw" customClass="FooterTableViewCell" customModule="Hills" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="625" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="625" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-MW-ZNp">
+                        <rect key="frame" x="0.0" y="0.0" width="625" height="98"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29b-7w-FYN">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="BrandColorWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEw-cx-4bE">
+                                <rect key="frame" x="159" y="0.0" width="148.5" height="98"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-MG-MTt">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="98"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knh-hu-mcM">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="98"/>
+                                        <state key="normal">
+                                            <color key="titleColor" name="BrandColorWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="facebookPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2pM-Gl-yjq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cZs-MG-MTt" secondAttribute="bottom" id="1Zn-rg-CkK"/>
+                                    <constraint firstItem="knh-hu-mcM" firstAttribute="centerX" secondItem="MEw-cx-4bE" secondAttribute="centerX" id="3iK-Nl-f3O"/>
+                                    <constraint firstItem="knh-hu-mcM" firstAttribute="leading" secondItem="MEw-cx-4bE" secondAttribute="leading" id="4gD-ig-VaB"/>
+                                    <constraint firstAttribute="trailing" secondItem="knh-hu-mcM" secondAttribute="trailing" id="919-Of-sW5"/>
+                                    <constraint firstItem="knh-hu-mcM" firstAttribute="centerY" secondItem="MEw-cx-4bE" secondAttribute="centerY" id="EfT-5n-Nt7"/>
+                                    <constraint firstItem="cZs-MG-MTt" firstAttribute="leading" secondItem="MEw-cx-4bE" secondAttribute="leading" id="JIA-k9-cVM"/>
+                                    <constraint firstAttribute="trailing" secondItem="cZs-MG-MTt" secondAttribute="trailing" id="MoC-xI-vu1"/>
+                                    <constraint firstItem="cZs-MG-MTt" firstAttribute="top" secondItem="MEw-cx-4bE" secondAttribute="top" id="pDD-OD-WST"/>
+                                    <constraint firstItem="knh-hu-mcM" firstAttribute="top" secondItem="MEw-cx-4bE" secondAttribute="top" id="uOP-0X-HeC"/>
+                                    <constraint firstAttribute="bottom" secondItem="knh-hu-mcM" secondAttribute="bottom" id="xBC-hL-Rx3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FL-iZ-iZ7">
+                                <rect key="frame" x="317.5" y="0.0" width="149" height="98"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="Can-h3-aJv">
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="98"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY1-eO-jtV">
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="98"/>
+                                        <connections>
+                                            <action selector="linkedinPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c2T-F7-jkV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wY1-eO-jtV" firstAttribute="centerY" secondItem="2FL-iZ-iZ7" secondAttribute="centerY" id="0Gq-gr-byg"/>
+                                    <constraint firstItem="wY1-eO-jtV" firstAttribute="top" secondItem="2FL-iZ-iZ7" secondAttribute="top" id="7YQ-BG-gcC"/>
+                                    <constraint firstItem="Can-h3-aJv" firstAttribute="top" secondItem="2FL-iZ-iZ7" secondAttribute="top" id="7ZD-04-4b3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Can-h3-aJv" secondAttribute="trailing" id="BFz-ZE-qjp"/>
+                                    <constraint firstItem="wY1-eO-jtV" firstAttribute="centerX" secondItem="2FL-iZ-iZ7" secondAttribute="centerX" id="QQ4-m4-foL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Can-h3-aJv" secondAttribute="bottom" id="TR9-Zt-HD0"/>
+                                    <constraint firstAttribute="bottom" secondItem="wY1-eO-jtV" secondAttribute="bottom" id="chu-nc-18w"/>
+                                    <constraint firstAttribute="trailing" secondItem="wY1-eO-jtV" secondAttribute="trailing" id="kdT-rc-v54"/>
+                                    <constraint firstItem="wY1-eO-jtV" firstAttribute="leading" secondItem="2FL-iZ-iZ7" secondAttribute="leading" id="njL-i4-OpY"/>
+                                    <constraint firstItem="Can-h3-aJv" firstAttribute="leading" secondItem="2FL-iZ-iZ7" secondAttribute="leading" id="qkx-dm-6ps"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEX-1q-anz">
+                                <rect key="frame" x="476.5" y="0.0" width="148.5" height="98"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="EZH-Hr-J77">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="98"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiF-NI-7aQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="98"/>
+                                        <connections>
+                                            <action selector="youtubePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="af4-8y-7N4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EZH-Hr-J77" secondAttribute="bottom" id="35z-fX-Kdt"/>
+                                    <constraint firstItem="EZH-Hr-J77" firstAttribute="leading" secondItem="nEX-1q-anz" secondAttribute="leading" id="Flx-YA-hME"/>
+                                    <constraint firstAttribute="trailing" secondItem="BiF-NI-7aQ" secondAttribute="trailing" id="SIW-Kb-n0N"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZH-Hr-J77" secondAttribute="trailing" id="a6H-cQ-lIW"/>
+                                    <constraint firstItem="BiF-NI-7aQ" firstAttribute="centerY" secondItem="nEX-1q-anz" secondAttribute="centerY" id="f38-lf-uzQ"/>
+                                    <constraint firstItem="BiF-NI-7aQ" firstAttribute="centerX" secondItem="nEX-1q-anz" secondAttribute="centerX" id="gAZ-an-qdH"/>
+                                    <constraint firstItem="BiF-NI-7aQ" firstAttribute="top" secondItem="nEX-1q-anz" secondAttribute="top" id="ie0-9q-vTj"/>
+                                    <constraint firstItem="EZH-Hr-J77" firstAttribute="top" secondItem="nEX-1q-anz" secondAttribute="top" id="ocM-AE-Cdf"/>
+                                    <constraint firstAttribute="bottom" secondItem="BiF-NI-7aQ" secondAttribute="bottom" id="pSA-pb-2H6"/>
+                                    <constraint firstItem="BiF-NI-7aQ" firstAttribute="leading" secondItem="nEX-1q-anz" secondAttribute="leading" id="qju-M8-3z4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yU8-MW-ZNp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="COu-hQ-8kI"/>
+                    <constraint firstItem="yU8-MW-ZNp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="M5X-Yi-oHK"/>
+                    <constraint firstItem="yU8-MW-ZNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QzI-H1-oYo"/>
+                    <constraint firstAttribute="trailing" secondItem="yU8-MW-ZNp" secondAttribute="trailing" id="ouH-5Q-DmR"/>
+                    <constraint firstItem="yU8-MW-ZNp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="s20-BZ-emL"/>
+                    <constraint firstAttribute="bottom" secondItem="yU8-MW-ZNp" secondAttribute="bottom" id="zGX-MN-pjS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="Menu Background"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="364.49275362318843" y="62.946428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="facebook" width="221" height="221"/>
+        <image name="linkedin" width="221" height="221"/>
+        <image name="youtube" width="221" height="221"/>
+        <namedColor name="BrandColorWhite">
+            <color red="0.99199998378753662" green="0.99199998378753662" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Menu Background">
+            <color red="0.14100000262260437" green="0.15299999713897705" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

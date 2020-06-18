@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="49" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="Hills" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="305" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HillsLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="7ir-gh-H2U">
+                        <rect key="frame" x="5" y="5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7B0-hm-m1l"/>
+                            <constraint firstAttribute="width" constant="20" id="c6H-9m-QVD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Nl-7s-Cnp">
+                        <rect key="frame" x="35" y="6.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="BrandColorWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="Menu Background"/>
+                <constraints>
+                    <constraint firstItem="7ir-gh-H2U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Mcl-rk-9r1"/>
+                    <constraint firstItem="7ir-gh-H2U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="faX-OJ-7Mu"/>
+                    <constraint firstItem="7ir-gh-H2U" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mBG-JR-QT2"/>
+                    <constraint firstItem="7Nl-7s-Cnp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="o73-N2-i7d"/>
+                    <constraint firstAttribute="bottom" secondItem="7ir-gh-H2U" secondAttribute="bottom" constant="5" id="pXi-LF-GwH"/>
+                    <constraint firstItem="7Nl-7s-Cnp" firstAttribute="leading" secondItem="7ir-gh-H2U" secondAttribute="trailing" constant="10" id="wcH-g2-c7C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="icom" destination="7ir-gh-H2U" id="tAT-dr-PiX"/>
+                <outlet property="label" destination="7Nl-7s-Cnp" id="5Xs-t8-S04"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="37.165178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="HillsLogoWhite" width="266.5" height="108"/>
+        <namedColor name="BrandColorWhite">
+            <color red="0.99199998378753662" green="0.99199998378753662" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Menu Background">
+            <color red="0.14100000262260437" green="0.15299999713897705" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

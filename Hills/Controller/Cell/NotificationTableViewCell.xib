@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCellIdentifier" rowHeight="87" id="KGk-i7-Jjw" customClass="NotificationTableViewCell" customModule="Hills" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creative_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9FN-fK-rcK">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5GJ-AH-yIf"/>
+                            <constraint firstAttribute="width" constant="40" id="S3s-aG-0ch"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8A-Cc-O5t">
+                        <rect key="frame" x="49" y="5" width="21.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4Y-ON-fyy">
+                        <rect key="frame" x="417" y="5" width="24" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsD-yI-tNe">
+                        <rect key="frame" x="49" y="19" width="392" height="29"/>
+                        <string key="text">This is a message to be displayed in the notification area. These can go to multiple lines but no more than two.  If there are more the words are truncated.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y8A-Cc-O5t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="009-ze-fMP"/>
+                    <constraint firstItem="e4Y-ON-fyy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2rG-Wl-XZl"/>
+                    <constraint firstAttribute="trailing" secondItem="e4Y-ON-fyy" secondAttribute="trailing" constant="5" id="5PK-FD-GZh"/>
+                    <constraint firstItem="xsD-yI-tNe" firstAttribute="top" secondItem="Y8A-Cc-O5t" secondAttribute="bottom" constant="2" id="K4U-kJ-K1q"/>
+                    <constraint firstItem="9FN-fK-rcK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Tgc-9C-YVu"/>
+                    <constraint firstItem="xsD-yI-tNe" firstAttribute="leading" secondItem="9FN-fK-rcK" secondAttribute="trailing" constant="4" id="UmV-Kl-N4c"/>
+                    <constraint firstAttribute="trailing" secondItem="xsD-yI-tNe" secondAttribute="trailing" constant="5" id="aYh-YS-HVN"/>
+                    <constraint firstAttribute="bottom" secondItem="9FN-fK-rcK" secondAttribute="bottom" constant="5" id="j0P-1h-JGn"/>
+                    <constraint firstItem="9FN-fK-rcK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="oj7-dl-1i1"/>
+                    <constraint firstItem="Y8A-Cc-O5t" firstAttribute="leading" secondItem="9FN-fK-rcK" secondAttribute="trailing" constant="4" id="u88-Oh-2uo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="motificationIcon" destination="9FN-fK-rcK" id="HJ9-pu-3Ze"/>
+                <outlet property="notificationTitle" destination="Y8A-Cc-O5t" id="rZf-GM-PL6"/>
+                <outlet property="notificationessageBody" destination="xsD-yI-tNe" id="mLD-al-6DK"/>
+                <outlet property="notiifcationTime" destination="e4Y-ON-fyy" id="WDz-HC-bb9"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="63.950892857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="creative_logo" width="597" height="600"/>
+    </resources>
+</document>

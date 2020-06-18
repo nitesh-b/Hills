@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "accesscontrol_feature.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
