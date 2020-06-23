@@ -49,8 +49,9 @@ class HomeController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Program Starts Here")
-        carouseCollectionlView.dataSource = self
-        carouseCollectionlView.delegate = self
+        carouseCollectionlView.dataSource = CarouselCollectionViewDataSource()
+        //carouseCollectionlView.dataSource = self
+       // carouseCollectionlView.delegate = self
         PreferredCollectionView.dataSource = self
         PreferredCollectionView.delegate = self
         getCarouselData()
@@ -190,6 +191,20 @@ extension UIViewController {
     
 }
 
+class CarouselCollectionViewDataSource : NSObject, UICollectionViewDataSource{
+    var homeController = HomeController()
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeController.carouselCollection.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let imageURL = homeController.carouselCollection[indexPath.row]
+                   let item = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Carousel.cellIdentifier, for: indexPath) as! CarouselCollectionViewCell
+                   item.carouselImageView?.sd_setImage(with: URL(string: imageURL.image)!, placeholderImage: UIImage(named: "HillsLogoWhite.png"))
+                   return item
+    }
+}
+
 extension HomeController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == carouseCollectionlView{
@@ -201,16 +216,16 @@ extension HomeController: UICollectionViewDataSource{
             return 0
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(collectionView == carouseCollectionlView){
-            
+
             let imageURL = carouselCollection[indexPath.row]
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Carousel.cellIdentifier, for: indexPath) as! CarouselCollectionViewCell
             item.carouselImageView?.sd_setImage(with: URL(string: imageURL.image)!, placeholderImage: UIImage(named: "HillsLogoWhite.png"))
             return item
         }else{
-            
+
             let logoURL = preferrdBrandCollection[indexPath.row]
             let item = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Brand.cellIdentifier, for: indexPath) as! PreferredBrandCollectionViewCell
             item.preferredImageView?.sd_setImage(with: URL(string: logoURL.logo)!, placeholderImage: UIImage(named: "HillsLogoWhite.png"))

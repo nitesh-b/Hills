@@ -63,13 +63,27 @@ class FeaturedProductViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let product = featuredProductCollection[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FeaturedProduct.cellIdentifier, for: indexPath) as! ProductCollectionViewCell
         cell.productImage.sd_setImage(with: URL(string: product.productImage), placeholderImage: UIImage(named: "HillsLogoWhite.png") )
         cell.productName.text = product.productName
         cell.productSku.text = product.productNumber
         cell.productManufacturer.text = product.productSupplier
+        let layer = cell.layer
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowRadius = 2
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOpacity = 0.2
+        layer.frame = cell.frame
+       // cell.tagLabel.text = tagItems[indexPath.row].text
        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let linkURL = featuredProductCollection[indexPath.row].productLink
+        UIApplication.shared.open(URL(string: linkURL)! as URL, options: [:], completionHandler: nil)
     }
     
     @IBAction func categoryPressed(_ sender: UIButton) {

@@ -19,7 +19,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var textBackgroundView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-         
+        layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
 
     @IBAction func eventButton(_ sender: UIButton) {
